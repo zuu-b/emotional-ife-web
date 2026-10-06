@@ -1,0 +1,294 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: white;
+    background: black;
+    overflow: hidden;
+}
+
+/* ==============================
+   ALL SLIDES
+   ============================== */
+
+.slide {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 1s ease;
+
+    /* YOUR ONE BACKGROUND IMAGE */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.70)
+        ),
+        url("p1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* The slide currently being shown */
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==============================
+   CONTENT
+   ============================== */
+
+.content {
+    width: 90%;
+    max-width: 750px;
+
+    padding: 30px;
+
+    animation: appear 1.2s ease;
+}
+
+
+/* ==============================
+   SMALL INTRO TEXT
+   ============================== */
+
+.small-text {
+    font-size: 0.85rem;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    opacity: 0.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   MAIN HEADINGS
+   ============================== */
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+
+/* ==============================
+   NORMAL TEXT
+   ============================== */
+
+p {
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    margin: 15px 0;
+}
+
+
+/* ==============================
+   POETIC TEXT
+   ============================== */
+
+.poem {
+    margin: 30px 0;
+
+    font-size: 1.2rem;
+
+    line-height: 2;
+
+    font-style: italic;
+}
+
+
+/* ==============================
+   MUSICIAN QUOTE
+   ============================== */
+
+.quote {
+    margin: 25px 0;
+
+    font-size: 1rem;
+
+    font-style: italic;
+
+    opacity: 0.85;
+}
+
+
+/* ==============================
+   BUTTON CONTAINER
+   ============================== */
+
+.buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+    padding: 13px 27px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Button hover effect */
+
+button:hover {
+    background: white;
+
+    color: black;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Button click effect */
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* ==============================
+   SLIDE ANIMATION
+   ============================== */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* ==============================
+   MOBILE PHONE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .content {
+        width: 92%;
+
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    .poem {
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
+    .small-text {
+        font-size: 0.7rem;
+
+        letter-spacing: 3px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+
+        max-width: 300px;
+    }
+}
+
+
+/* ==============================
+   LARGE SCREENS
+   ============================== */
+
+@media (min-width: 1200px) {
+
+    .content {
+        max-width: 850px;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}

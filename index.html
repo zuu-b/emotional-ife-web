@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Your Soul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SLIDE 1 -->
+    <section class="slide active" id="home">
+        <div class="content">
+            <p class="small-text">Take a breath...</p>
+
+            <h1>How are you feeling?</h1>
+
+            <p>
+                Not how you're supposed to feel.<br>
+                Not how everyone thinks you feel.<br>
+                <i>How do you actually feel?</i>
+            </p>
+
+            <div class="buttons">
+                <button onclick="showSlide('sad')">I'm sad</button>
+                <button onclick="showSlide('happy')">I'm happy</button>
+                <button onclick="showSlide('okay')">I'm okay</button>
+                <button onclick="showSlide('overwhelmed')">I'm overwhelmed</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SAD SLIDE -->
+    <section class="slide" id="sad">
+        <div class="content">
+            <p class="small-text">For the days that hurt...</p>
+
+            <h1>It's okay to not be okay.</h1>
+
+            <p>
+                You don't have to pretend that you're strong every second.
+                Sometimes surviving the day is enough.
+            </p>
+
+            <p class="poem">
+                "Some nights are heavy,<br>
+                some mornings feel impossible.<br>
+                But you are still here.<br>
+                And that means your story<br>
+                isn't finished yet."
+            </p>
+
+            <p class="quote">
+                “I hate to see you cry, but I love to see you smile.”
+                <br>— Drake
+            </p>
+
+            <button onclick="showSlide('life')">Continue →</button>
+        </div>
+    </section>
+
+
+    <!-- HAPPY SLIDE -->
+    <section class="slide" id="happy">
+        <div class="content">
+            <p class="small-text">Hold onto this feeling...</p>
+
+            <h1>Let yourself be happy.</h1>
+
+            <p>
+                You don't need a reason to enjoy a beautiful moment.
+                Some happiness is meant to simply be felt.
+            </p>
+
+            <p class="poem">
+                "Laugh loudly.<br>
+                Love deeply.<br>
+                Take pictures.<br>
+                Stay a little longer<br>
+                in the moments that feel like home."
+            </p>
+
+            <p class="quote">
+                “Good days are coming.”
+                <br>— SZA
+            </p>
+
+            <button onclick="showSlide('life')">Continue →</button>
+        </div>
+    </section>
+
+
+    <!-- OKAY SLIDE -->
+    <section class="slide" id="okay">
+        <div class="content">
+            <p class="small-text">Maybe you're somewhere in between...</p>
+
+            <h1>And that's okay too.</h1>
+
+            <p>
+                Life doesn't have to be extremely good or extremely bad.
+                Sometimes it's simply a quiet day.
+            </p>
+
+            <p class="poem">
+                "You don't need to have everything figured out.<br>
+                You are allowed to simply exist,<br>
+                breathe,<br>
+                and take your time."
+            </p>
+
+            <button onclick="showSlide('life')">Continue →</button>
+        </div>
+    </section>
+
+
+    <!-- OVERWHELMED SLIDE -->
+    <section class="slide" id="overwhelmed">
+        <div class="content">
+            <p class="small-text">Slow down...</p>
+
+            <h1>You don't have to carry everything today.</h1>
+
+            <p>
+                Put down what can wait.
+                Take one thing at a time.
+                You are a human being, not a machine.
+            </p>
+
+            <p class="poem">
+                "Breathe in.<br>
+                Breathe out.<br>
+                One problem.<br>
+                One moment.<br>
+                One day at a time."
+            </p>
+
+            <button onclick="showSlide('life')">Continue →</button>
+        </div>
+    </section>
+
+
+    <!-- FINAL LIFE SLIDE -->
+    <section class="slide" id="life">
+        <div class="content">
+            <p class="small-text">Remember this...</p>
+
+            <h1>Life is still yours.</h1>
+
+            <p>
+                You will lose people.<br>
+                You will change.<br>
+                You will make mistakes.<br>
+                You will fall in love.<br>
+                You will heal.
+            </p>
+
+            <p class="poem">
+                "Maybe life isn't about finding<br>
+                one perfect moment.<br>
+                Maybe it's about collecting<br>
+                little moments that make<br>
+                being alive worth it."
+            </p>
+
+            <button onclick="showSlide('home')">Start Again ↻</button>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
